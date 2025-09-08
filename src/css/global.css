@@ -3,7 +3,7 @@
   --header-height: 50px;
 }
 
-body { 
+body {
   min-height: 100vh;
   margin: 0;
   display: grid;
@@ -12,32 +12,52 @@ body {
 
 /* --- Header part --- */
 header {
-  /* positioon */
-  position: sticky;
+  position: flex;
   height: var(--header-height);
-  background-color: rgba(100, 100, 100, 0.5);
-  /* flex box */
+  background: linear-gradient(
+    to right,
+    rgba(100, 100, 100, 0.8) 50%,
+    red 55%,
+    orange 63%,
+    yellow 71%,
+    green 79%,
+    blue 87%,
+    indigo 95%,
+    violet 100%
+  );
   display: flex;
-  justify-content: space-between;
   align-items: center;
   z-index: 1;
+  color: white;
 }
 
-header nav ul {
-  /* positioning */
-  display: flex;
-  gap: 50px;
+header ul {
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  width: 100%;
   list-style: none;
-  margin-right: 150px;
-  /* fontsize */
-  font-size: large;
+  margin: 0;
+  padding: 0;
+  justify-items: center;
 }
 
-label[for="monochrome-img"], #monochrome-img {
+header li:first-child {
+  grid-column: 1;
+  justify-self: center;
+}
+
+header li:last-child {
+  grid-column: 3;
+  justify-self: center;
+}
+
+label[for="monochrome-img"],
+#monochrome-img {
   margin: 12px 16px;
 }
 
-#preview, #colorization-preview {
+#preview,
+#colorization-preview {
   height: var(--image-height);
 }
 
