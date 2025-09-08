@@ -16,16 +16,19 @@
     </ul>
   </header>
 
-  <label for="monochrome-img">Please attach a image file</label>
-  <input id="monochrome-img" type="file" name="attached-file" accept="image/png image/jpeg" />
+  <div class="file-selct-container">
+    <input id="monochrome-img" type="file" name="attached-file" accept="image/png image/jpeg" />
+    <button class="file-select">Please select a image file</button>
+  </div>
 
   <div class="image-dispaly-container">
     <img id="preview" alt="attached-img" />
     <img src="../assets/arrow-bar-right.svg" alt="right-arrow-svg" class="arrow">
     <img id="colorization-preview" alt="colorized-img" />
   </div>
-  
+
   <script type="module" src="../dist/js/display-img.js"></script>
+  <script type="module" src="../dist/js/setup.js"></script>
 </body>
 
 </html>
