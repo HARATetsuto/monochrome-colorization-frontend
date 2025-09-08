@@ -10,21 +10,16 @@ body {
   grid-template-rows: var(--header-height) 1fr;
 }
 
-/* --- Header part --- */
 header {
-  position: flex;
-  height: var(--header-height);
-  background: linear-gradient(
-    to right,
-    rgba(100, 100, 100, 0.8) 50%,
-    red 55%,
-    orange 63%,
-    yellow 71%,
-    green 79%,
-    blue 87%,
-    indigo 95%,
-    violet 100%
-  );
+  background: linear-gradient(to right,
+      rgba(100, 100, 100, 0.8) 50%,
+      red 55%,
+      orange 63%,
+      yellow 71%,
+      green 79%,
+      blue 87%,
+      indigo 95%,
+      violet 100%);
   display: flex;
   align-items: center;
   z-index: 1;
@@ -38,7 +33,6 @@ header ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  justify-items: center;
 }
 
 header li:first-child {
@@ -51,10 +45,55 @@ header li:last-child {
   justify-self: center;
 }
 
-.file-selct-container {
+.file-select-container {
+  justify-self: center;
+  margin-top: 3vh;
+}
+
+/* ボタンのスタイル */
+.buttonNeumorphism {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  width: 60px;
+  aspect-ratio: 1;
+  color: #222;
+  background-color: #efefef;
+  border-radius: 50%;
+  box-shadow:
+    -4px -4px 8px #fff,
+    4px 4px 8px rgb(0 0 0 / 24%);
+}
+
+@media (any-hover: hover) {
+  .buttonNeumorphism {
+    transition: box-shadow 0.2s;
+  }
+
+  .buttonNeumorphism:hover {
+    box-shadow:
+      -2px -2px 4px #fff,
+      2px 2px 4px rgb(0 0 0 / 24%);
+  }
+
+  .buttonNeumorphism:active {
+    background-color: #ebebeb;
+    box-shadow: inset 4px 4px 8px rgb(0 0 0 / 16%);
+  }
+}
+
+.icon-row {
+  display: flex;
+  justify-content: center;
+  gap: calc(100vw * 0.05);
+}
+
+.file-icon_circle {
+  fill: orange;
+}
+
+.file-icon_body {
+  fill: green;
 }
 
 label[for="monochrome-img"],

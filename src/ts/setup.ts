@@ -1,6 +1,6 @@
 (() => {
   const monochromeImg = document.getElementById('monochrome-img') as HTMLInputElement;
-  const fileBtn = document.querySelector('.file-select') as HTMLButtonElement;
+  const fileBtn = document.querySelector('.bi') as SVGAElement;
   
   fileBtn.addEventListener('click', (e) => {
     if (monochromeImg) {
