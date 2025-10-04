@@ -1,35 +1,13 @@
 {
   "type": "module",
   "scripts": {
-    "dev:client": "vite",
-    "dev:server": "nodemon ./server/index.ts",
-    "dev": "npm-run-all --parallel dev:client dev:server",
+    "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "typecheck": "tsc --noEmit",
-    "start:dev": "node ./server/index.ts",
-    "start": "node ./dist/server/index.js"
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@types/cors": "^2.8.19",
-    "@types/express": "^5.0.3",
-    "@types/form-data": "^2.2.1",
-    "@types/multer": "^2.0.0",
-    "@types/node": "^24.4.0",
-    "@types/node-fetch": "^2.6.13",
-    "cors": "^2.8.5",
-    "dotenv": "^17.2.2",
-    "nodemon": "^3.1.10",
-    "npm-run-all": "^4.1.5",
-    "request": "^2.88.2",
     "typescript": "^5.9.2",
     "vite": "^7.1.4"
-  },
-  "dependencies": {
-    "express": "^5.1.0",
-    "form-data": "^4.0.4",
-    "multer": "^2.0.2",
-    "node-fetch": "^3.3.2",
-    "ts-node": "^10.9.2"
   }
 }
