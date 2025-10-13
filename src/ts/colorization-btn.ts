@@ -15,7 +15,6 @@
     form.append('file', file, file.name);
 
     try {
-      console.log('clicked');
       const res = await fetch(serverURL, {
         method: 'POST',
         body: form,
